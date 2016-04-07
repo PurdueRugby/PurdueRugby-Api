@@ -1,2 +1,2 @@
 # backend-node-mongo
-current experimental backed for Purdue Rugby apps
+current experimental backend for Purdue Rugby apps
