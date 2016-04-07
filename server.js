@@ -22,7 +22,7 @@ app.use(morgan('dev'));
 mongoose.connect(config.database);
 
 //bring in api router
-require('./app/routes')(app);
+require('./app/routes/roster')(app);
 
 app.listen(port);
 console.log('Your server is running on port ' + port + '.');
