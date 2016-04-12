@@ -5,6 +5,7 @@ var morgan = require('morgan');
 var config = require('./config/main');
 var app = express();
 var port = 3000;
+require('dotenv').config();
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -17,9 +18,9 @@ app.get('/', function(req, res) {
 
 //log request to console
 app.use(morgan('dev'));
-console.log(process.env.MLABDB);
+console.log(process.env.DB);
 //connect to db
-var db = mongoose.connect(process.env.MLABDB); 
+var db = mongoose.connect(process.env.DB); 
 //bring in api router
 require('./app/routes/roster')(app);
 require('./app/routes/calendar')(app);
