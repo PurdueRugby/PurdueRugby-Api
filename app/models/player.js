@@ -6,7 +6,7 @@ var PlayerSchema = new mongoose.Schema({
 	name : {
 		type: String,
 		unique: true,
-		require: true
+		required: true
 	},
 	position: {
 		type: String,
@@ -14,11 +14,11 @@ var PlayerSchema = new mongoose.Schema({
 	},
 	hometown: {
 		type: String,
-		require: false
+		required: false
 	},
 	year: {
 		type: String,
-		require: false
+		required: false
 	}
 });
 
