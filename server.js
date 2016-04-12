@@ -23,6 +23,8 @@ mongoose.connect(config.database);
 
 //bring in api router
 require('./app/routes/roster')(app);
+require('./app/routes/calendar')(app);
+
 
 app.listen(port);
 console.log('Your server is running on port ' + port + '.');
