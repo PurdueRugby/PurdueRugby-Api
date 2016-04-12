@@ -17,10 +17,9 @@ app.get('/', function(req, res) {
 
 //log request to console
 app.use(morgan('dev'));
-
+console.log(process.env.MLABDB);
 //connect to db
-var db = mongoose.connect(config.database);
-
+var db = mongoose.connect(process.env.MLABDB); 
 //bring in api router
 require('./app/routes/roster')(app);
 require('./app/routes/calendar')(app);
