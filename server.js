@@ -5,7 +5,6 @@ var morgan = require('morgan');
 var config = require('./config/main');
 var app = express();
 var port = 3000;
-require('dotenv').config();
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
