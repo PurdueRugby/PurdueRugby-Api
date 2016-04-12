@@ -19,6 +19,7 @@ app.get('/', function(req, res) {
 app.use(morgan('dev'));
 //connect to db
 var db = mongoose.connect(process.env.MONGODB_URI); 
+console.log(process.env.MONGODB_URI);
 //bring in api router
 require('./app/routes/roster')(app);
 require('./app/routes/calendar')(app);
