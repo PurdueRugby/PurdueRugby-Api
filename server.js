@@ -19,9 +19,7 @@ app.get('/', function(req, res) {
 app.use(morgan('dev'));
 
 //connect to db
-var db = mongoose.connect(process.env.MLABDB);
-console.log(db);
-console.log(process.env.MLABDB);
+var db = mongoose.connect(config.database);
 
 //bring in api router
 require('./app/routes/roster')(app);
