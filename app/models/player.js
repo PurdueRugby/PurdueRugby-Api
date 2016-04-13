@@ -8,6 +8,14 @@ var PlayerSchema = new mongoose.Schema({
 		unique: true,
 		required: true
 	},
+	height: {
+		type: String,
+		required: true
+	},
+	weight: {
+		type: int,
+		required: true
+	},
 	position: {
 		type: String,
 		required: true
