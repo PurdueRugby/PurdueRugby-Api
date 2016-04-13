@@ -9,6 +9,7 @@ var port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.set('port', (process.env.PORT || 5000));
 
 //current homepage
 app.get('/', function(req, res) {
@@ -24,8 +25,9 @@ require('./app/routes/roster')(app);
 require('./app/routes/calendar')(app);
 
 
-app.listen(port);
-console.log('Your server is running on port ' + port + '.');
+app.listen(app.get('port'), function() {
+	console.log('Your server is running on port ', app.get('port'));
+});
 
 
 
