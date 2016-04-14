@@ -13,7 +13,7 @@ var PlayerSchema = new mongoose.Schema({
 		required: true
 	},
 	weight: {
-		type: int,
+		type: String,
 		required: true
 	},
 	position: {
