@@ -6,7 +6,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"python": "python3 hello.py"
+	"roster-upload": "python3 scripts/clearRoster.py && python3 scripts/uploadRoster.py",
+	"roster-clear": "python3 scripts/clearRoster.py"
   },
   "author": "jwlehman93",
   "license": "ISC",

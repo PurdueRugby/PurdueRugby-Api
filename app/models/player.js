@@ -22,11 +22,15 @@ var PlayerSchema = new mongoose.Schema({
 	},
 	hometown: {
 		type: String,
-		required: false
+		required: true
+	},
+	homestate: {
+		type: String,
+		required: true
 	},
 	year: {
 		type: String,
-		required: false
+		required: true
 	}
 });
 
