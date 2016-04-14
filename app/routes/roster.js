@@ -20,7 +20,7 @@ module.exports = function(app) {
 
 	//add new player to roster
 	rosterRoutes.post('/register', function(req, res) {
-		if(!req.body.name || !req.body.position || !req.body.hometown || !req.body.year || !req.body.height || !req.body.weight)
+		if(!req.body.name || !req.body.position || !req.body.hometown || !req.body.homestate || !req.body.year || !req.body.height || !req.body.weight)
 			res.json({ success: false, message: 'Username, position, hometown, or year not present.' });
 		else {
 			var newUser = new Player({
@@ -29,6 +29,7 @@ module.exports = function(app) {
 				weight: req.body.weight,
 				position: req.body.position,
 				hometown: req.body.hometown,
+				homestate: req.body.homestate,
 				year: req.body.year
 			});
 
@@ -67,6 +68,7 @@ module.exports = function(app) {
 			player.name = newInfo.name;
 			player.position = newInfo.position;
 			player.hometown = newInfo.hometown;
+			player.homestate = newInfo.homestate;
 			player.year = newInfo.year;
 			player.height = newInfo.height;
 			player.weight = newInfo.weight;
