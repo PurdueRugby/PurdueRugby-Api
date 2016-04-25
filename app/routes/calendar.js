@@ -10,7 +10,7 @@ module.exports = function(app) {
 	 * Calendar Routes
 	 *
 	 */
-	//retrieve all events from roster
+	//retrieve all events from calendar
 	calendarRoutes.get('/', function(req, res) {
 		CalendarEvent.find(function(err, calendar) {
 			if(err)
