@@ -2,6 +2,6 @@
 current experimental backend for Purdue Rugby apps
 
 
-######Things ToDo
--[ ] Add Roster Section
--[ ] Add News Section
+####Things ToDo
+- [ ] Add pictures for players
+- [ ] Add News Schema
